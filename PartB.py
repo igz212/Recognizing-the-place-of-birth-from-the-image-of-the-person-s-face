@@ -101,3 +101,26 @@ print("Accuracy Linear Kernel:", accuracy_lin)
 print("Accuracy Radial Basis Kernel:", accuracy_rbf)
 print("Accuracy Polynomial Kernel:", accuracy_poly)
 print("Accuracy Sigmoid Kernel:", accuracy_sig)
+
+data =  pd.read_csv('dataSet2Pandas.txt')
+data_np_array = np.asarray(data)
+X = data_np_array[:, :63]
+y = data_np_array[:,64]
+
+x_train, x_test, y_train, y_test = train_test_split(X, y, train_size= 0.7)
+
+lr = LogisticRegression(max_iter=1500)
+lr.fit(x_train,y_train)
+lrScore = lr.score(x_test, y_test)
+
+poly = svm.SVC(kernel='poly', degree=3, C=300, decision_function_shape='ovo').fit(x_train, y_train)
+poly_pred = poly.predict(x_test)
+svmScore = poly.score(x_test, y_test)
+
+rf = RandomForestClassifier(n_estimators=500)
+rf.fit(x_train,y_train)
+rfScore = rf.score(x_test, y_test)
+
+print("Logistic Regression Score:   ", lrScore)
+print("SVM  Score:                  ", svmScore)
+print("Random Forest  Score:        ", rfScore)
