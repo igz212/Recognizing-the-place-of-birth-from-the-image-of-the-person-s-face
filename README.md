@@ -1,2 +1,2 @@
-# Face-classification-SVM-
-face classification by SVM Classifier and HOG descriptor
+# Face-classification-using-openCV2
+face classification by HOG and LBP descriptors; Using Support Vector Machine, Logistic Regression and Random Forest classifiers
