@@ -14,5 +14,3 @@ for file in iGzFaceToolKit.readFileList("listfile.txt"):
 iGzFaceToolKit.readListOfFilesAndWriteToTextFile("C:/source/Whole Images/","./listfile.txt")
 for file in iGzFaceToolKit.readFileList("listfile.txt"):
     iGzFaceToolKit.cropFaces_save_FromImage("C:/source/whole Images/",file,"C:/Erfolgen3/")
-
-
