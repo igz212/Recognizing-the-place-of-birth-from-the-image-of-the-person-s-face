@@ -1,0 +1,6 @@
+Pandas
+numpy
+cv2
+os
+sklearn
+matplotlib
